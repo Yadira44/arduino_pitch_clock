@@ -2,7 +2,7 @@
 
 ## Overview
 MLB pitch clock made at home with an arduino.
-This pitch clock simulates 3 rules + game control
+This pitch clock simulates 3 rules + game control:
 
 1) 30 seconds between batters
 2) 15 seconds between each pitch with no runners on base
