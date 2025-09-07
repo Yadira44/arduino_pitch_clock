@@ -35,5 +35,6 @@ This design uses an arduino uno r3 and an LCD 16x2 (I2C)
 
 ## Wiring
 
-<img width="1537" height="660" alt="Screenshot 2025-09-07 at 6 00 26 PM" src="https://github.com/user-attachments/assets/78b5bc09-7f53-4009-b458-9cdc9e73620b" />
+<img width="1259" height="887" alt="Screenshot 2025-09-07 at 6 01 30 PM" src="https://github.com/user-attachments/assets/35871490-eec1-4298-a2ce-e903ac33aaf0" />
+
 
