@@ -27,6 +27,6 @@ This design uses an arduino uno r3 and an LCD 16x2 (I2C)
 - Breadboard
 - Resistors
   -  220Ω for LCD backlight LED
-  -  10kΩ resistors for push buttons (4x)
+  -  10kΩ for push buttons (4x)
 - Jumper Wires
 - Potentiometer
