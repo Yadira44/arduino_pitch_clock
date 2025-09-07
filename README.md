@@ -46,3 +46,103 @@ This design uses an arduino uno r3 and an LCD 16x2 (I2C)
 -------------------------------------------------------------------------------------------
 
 ## Code
+
+```
+/*
+
+Pitch Clock Logic:
+
+first button: thirty(30) seconds
+- timer beween batters
+
+second button: fifteen(15) seconds
+- timer between pitches with the bases empty
+
+third button: eighteen(18) seconds
+- timer between pitches with runners on
+
+fourth button: reset button
+- reset button used when the batter steps off, pitcher
+steps off, Mound visits, injury timeouts, and
+offensive team timeouts.
+
+*/
+
+#include <LiquidCrystal.h>
+
+// LCD pins
+LiquidCrystal lcd(12, 11, 5, 4, 8, 7); 
+
+// Buttons
+const int thrityButton = 13; 
+const int fifteenButton = 10;
+const int eighteenButton = 6;
+const int resetButton = 3;
+
+// variables
+int countdownTime = 0; 
+unsigned long lastUpdate = 0; 
+bool running = false; 
+
+void setup() {
+  lcd.begin(16, 2);
+  pinMode(fifteenButton, INPUT);
+  pinMode(resetButton, INPUT);
+  pinMode(eighteenButton, INPUT);
+  pinMode(thrityButton, INPUT);
+  lcd.clear();
+}
+
+void loop() {
+  // Start 15s countdown
+  if (digitalRead(fifteenButton) == HIGH) {
+    countdownTime = 15;
+    running = true;
+    lastUpdate = millis(); // reset timer
+  }
+
+  // Start 18s countdown
+  if (digitalRead(eighteenButton) == HIGH) {
+    countdownTime = 18;
+    running = true;
+    lastUpdate = millis();
+  }
+
+  // start 30s countdown
+  if(digitalRead(thrityButton) == HIGH) {
+    countdownTime = 30;
+    running = true;
+    lastUpdate = millis();
+  }
+
+  // Reset countdown
+  if (digitalRead(resetButton) == HIGH) {
+    countdownTime = 0;
+    running = false;
+    lcd.clear();
+  }
+
+  // Countdown logic
+  if (running) {
+    unsigned long currentMillis = millis();
+
+    if (currentMillis - lastUpdate >= 1000) { // update every 1 second
+      lastUpdate = currentMillis;
+
+      // Decrement first so all numbers including 1 and 0 show properly
+      if (countdownTime > 0) {
+        lcd.clear();
+        lcd.setCursor(0,0);
+        lcd.print(countdownTime);
+        countdownTime--;
+      } else {
+        // Countdown reached 0
+        lcd.clear();
+        lcd.setCursor(0,0);
+        lcd.print("0"); 
+        running = false;
+      }
+    }
+  }
+}
+```
