@@ -35,4 +35,5 @@ This design uses an arduino uno r3 and an LCD 16x2 (I2C)
 
 ## Wiring
 
-<img width="1728" height="895" alt="Pitch Clock Wiring" src="https://github.com/user-attachments/assets/d13f540c-7288-46c6-821b-f70f445cc1fc" />
+<img width="1537" height="660" alt="Screenshot 2025-09-07 at 6 00 26 PM" src="https://github.com/user-attachments/assets/78b5bc09-7f53-4009-b458-9cdc9e73620b" />
+
