@@ -12,3 +12,21 @@ steps off, Mound visits, injury timeouts, and
 offensive team timeouts.
 
 This design uses an arduino uno r3 and an LCD 16x2 (I2C)
+
+-------------------------------------------------------------------------------------------
+
+## Materials
+
+- Arduino Uno
+- LCD 16 x 2 (I2C)
+- 4 PushButtons
+  - 15 seconds
+  - 18 seconds
+  - 30 seconds
+  - Reset
+- Breadboard
+- Resistors
+  -  220Ω for LCD backlight LED
+  -  10kΩ resistors for push buttons (4x)
+- Jumper Wires
+- Potentiometer
