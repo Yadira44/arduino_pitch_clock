@@ -146,3 +146,12 @@ void loop() {
   }
 }
 ```
+
+-------------------------------------------------------------------------------------------
+
+## How To Use
+
+- Connect hardware as shown in schematic.
+- Upload the code to your Arduino.
+- Press a button to start countdown.
+- Reset anytime with the reset button.
