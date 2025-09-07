@@ -40,4 +40,5 @@ This design uses an arduino uno r3 and an LCD 16x2 (I2C)
 
 ### Schematic View
 
-[Frantic Migelo-Leelo.pdf](https://github.com/user-attachments/files/22198996/Frantic.Migelo-Leelo.pdf)
+<img width="1055" height="813" alt="Screenshot 2025-09-07 at 6 03 37 PM" src="https://github.com/user-attachments/assets/e475cc8a-ceee-415f-a34f-be648acbf242" />
+
